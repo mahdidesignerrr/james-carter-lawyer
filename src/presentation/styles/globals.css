@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: #fefefe;
+    color: #161616;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #cba05d;
+    color: #ffffff;
+  }
+
+  /* Accessibility focus ring */
+  :focus-visible {
+    outline: 2px solid #cba05d;
+    outline-offset: 2px;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #394664;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #cba05d;
+}
