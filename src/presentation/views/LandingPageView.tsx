@@ -13,6 +13,7 @@ import { FinalCtaBanner } from "../components/organisms/FinalCtaBanner";
 import { ConsultationSection } from "../components/organisms/ConsultationSection";
 import { FooterSection } from "../components/organisms/FooterSection";
 import { BackToTop } from "../components/atoms/BackToTop";
+import { KeloraWatermark } from "../components/atoms/KeloraWatermark";
 import { SmoothScrollProvider } from "../providers/SmoothScrollProvider";
 
 export const LandingPageView: React.FC = () => {
@@ -35,6 +36,7 @@ export const LandingPageView: React.FC = () => {
         </main>
         <FooterSection />
         <BackToTop />
+        <KeloraWatermark />
       </div>
     </SmoothScrollProvider>
   );
