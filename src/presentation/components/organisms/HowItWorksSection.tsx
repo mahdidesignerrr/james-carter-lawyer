@@ -70,7 +70,7 @@ export const HowItWorksSection: React.FC = () => {
   ];
 
   return (
-    <section id="how-it-works" className="bg-[#e6e8ec] scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28 py-16 lg:py-28">
+    <section id="how-it-works" className="bg-[#e6e8ec] scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28 py-20 sm:py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         <SectionHeading
           badge="HOW IT WORKS"
@@ -78,7 +78,7 @@ export const HowItWorksSection: React.FC = () => {
         />
 
         {/* Unified 4-Step Container Matching Figma Image 1 & Node 522:711 */}
-        <div className="bg-[#fefefe] rounded-2xl shadow-sm border border-neutral-200/90 overflow-hidden mt-8">
+        <div className="bg-[#fefefe] rounded-2xl shadow-sm border border-neutral-200/90 overflow-hidden mt-8 sm:mt-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 lg:divide-x divide-neutral-200/80">
             {steps.map((step) => (
               <div

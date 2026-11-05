@@ -8,7 +8,7 @@ export const FooterSection: React.FC = () => {
   const { scrollTo } = useScrollNavigation();
 
   return (
-    <footer className="bg-[#e6e8ec] text-[#07183d] pt-[80px] lg:pt-[100px] px-6 sm:px-12 lg:px-8">
+    <footer className="bg-[#e6e8ec] text-[#07183d] pt-20 sm:pt-24 lg:pt-[100px] px-6 sm:px-12 lg:px-8">
       <div className="max-w-[1200px] mx-auto w-full">
         {/* Main Content (Figma Node 566:1747) */}
         <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-16 pb-[48px]">

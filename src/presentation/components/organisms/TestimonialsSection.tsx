@@ -12,11 +12,11 @@ export const TestimonialsSection: React.FC = () => {
   return (
     <section
       id="testimonials"
-      className="bg-[#e6e8ec] scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28 py-16 sm:py-20 lg:py-[100px]"
+      className="bg-[#e6e8ec] scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28 py-20 sm:py-24 lg:py-32"
     >
       <div className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-[80px]">
         {/* Section Heading matching Figma Node 550:1445 */}
-        <div className="pb-8 lg:pb-12">
+        <div className="pb-10 sm:pb-12 lg:pb-14">
           <SectionHeading
             badge="TESTIMONIALS"
             title="Trusted by the People We Represent."

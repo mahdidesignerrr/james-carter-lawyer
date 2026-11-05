@@ -8,9 +8,9 @@ export const FinalCtaBanner: React.FC = () => {
   const { scrollTo } = useScrollNavigation();
 
   return (
-    <section className="bg-[#fefefe] px-4 sm:px-8 lg:px-[120px] py-16 sm:py-20 lg:py-[100px] flex justify-center">
+    <section className="bg-[#fefefe] px-4 sm:px-8 lg:px-[120px] py-20 sm:py-24 lg:py-32 flex justify-center">
       {/* Container (Figma Node 522:749) - Exact 1200px max width, #030a1a background, rounded 8px */}
-      <div className="bg-[#030a1a] w-full max-w-[1200px] rounded-[8px] overflow-hidden relative px-6 py-14 sm:px-12 sm:py-16 lg:px-[120px] lg:py-[100px] flex flex-col items-center justify-center text-center shadow-2xl">
+      <div className="bg-[#030a1a] w-full max-w-[1200px] rounded-[8px] overflow-hidden relative px-6 py-16 sm:px-12 sm:py-20 lg:px-[120px] lg:py-[100px] flex flex-col items-center justify-center text-center shadow-2xl">
         {/* Decorative Golden Circles (Figma Nodes 522:764 & 522:765) */}
         <div
           aria-hidden="true"

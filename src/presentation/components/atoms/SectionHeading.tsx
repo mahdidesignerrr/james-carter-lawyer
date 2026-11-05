@@ -48,7 +48,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   };
 
   return (
-    <div className={`flex flex-col ${alignClass} w-full pb-4 lg:pb-8 ${className}`}>
+    <div className={`flex flex-col ${alignClass} w-full pb-6 sm:pb-8 lg:pb-10 ${className}`}>
       {badge && (
         <div className="py-1 lg:py-1.5">
           <span className="font-sans font-semibold text-xs sm:text-sm lg:text-[15px] text-[#cba05d] tracking-[2.64px] uppercase select-none">
