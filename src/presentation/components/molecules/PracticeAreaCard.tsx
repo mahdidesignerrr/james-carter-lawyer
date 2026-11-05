@@ -26,31 +26,30 @@ export const PracticeAreaCard: React.FC<PracticeAreaCardProps> = ({
 
   return (
     <div
-      className={`group flex flex-col items-center text-center p-8 sm:p-10 lg:p-12 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl border border-black/5 lg:border-white/5 ${
+      className={`group flex flex-col items-center text-center p-6 sm:p-8 lg:p-8 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl border border-black/5 lg:border-white/5 ${
         isCream1Mobile ? "bg-[#fcf8f3]" : "bg-[#f4eada]"
       } ${
         isDarkDesktop ? "lg:bg-[#05112b]" : "lg:bg-[#394664]"
       } ${className}`}
     >
-      {/* Prominent, Large High-Res Practice Area Icon Badge */}
-      <div className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 mb-5 sm:mb-6 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110">
+      {/* Fitting, Proportional Practice Area Icon Badge matching Figma Node 522:689 (~48-52px) */}
+      <div className="relative w-12 h-12 sm:w-14 sm:h-14 mb-4 sm:mb-5 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-105">
         <Image
           src={iconSrc}
           alt={area.title}
-          width={140}
-          height={140}
-          className="w-18 h-18 sm:w-22 sm:h-22 lg:w-26 lg:h-26 object-contain drop-shadow-md"
-          priority
+          width={56}
+          height={56}
+          className="w-10 h-10 sm:w-12 sm:h-12 object-contain drop-shadow-sm"
         />
       </div>
 
       {/* Heading as in Figma */}
-      <h3 className="font-sans font-bold text-lg sm:text-xl lg:text-2xl text-[#5c4f39] lg:text-[#fefefe] mb-2.5 sm:mb-3 tracking-tight">
+      <h3 className="font-sans font-semibold text-lg sm:text-xl text-[#5c4f39] lg:text-[#fefefe] mb-2 sm:mb-2.5 tracking-tight">
         {area.title}
       </h3>
 
       {/* Description as in Figma */}
-      <p className="font-sans font-light text-xs sm:text-sm lg:text-base text-[#9c8561] lg:text-[#fefefe]/85 leading-relaxed max-w-xs">
+      <p className="font-sans font-light text-xs sm:text-sm text-[#9c8561] lg:text-[#fefefe]/80 leading-relaxed max-w-xs">
         {area.description}
       </p>
     </div>
