@@ -1,127 +1,98 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { useScrollNavigation } from "@/application/use-scroll-navigation.hook";
-import { PhoneCall, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export const FooterSection: React.FC = () => {
   const { scrollTo } = useScrollNavigation();
 
   return (
-    <footer className="bg-[#f6f8fa] text-[#161616] border-t border-neutral-200/80 pt-16 lg:pt-24 pb-14 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 relative z-10">
-        {/* Spacious 3-Column Grid Matching Figma Node 566:1738 */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 pb-16 border-b border-neutral-200/80">
-          {/* Col 1: Brand Story & Mission (5 Cols) */}
-          <div className="md:col-span-5 flex flex-col items-start gap-4">
-            <div className="flex items-center gap-3">
-              <Image
-                src="/assets/images/logo.png"
-                alt="James Carter"
-                width={48}
-                height={60}
-                className="w-9 h-11 object-contain"
-              />
-              <span className="font-serif font-medium text-2xl lg:text-3xl text-[#07183d] uppercase tracking-wide">
-                James Carter
-              </span>
-            </div>
-
-            <p className="font-sans font-light text-sm sm:text-base text-[#666666] leading-relaxed max-w-md pt-2">
+    <footer className="bg-[#e6e8ec] text-[#07183d] pt-[80px] lg:pt-[100px] px-6 sm:px-12 lg:px-8">
+      <div className="max-w-[1200px] mx-auto w-full">
+        {/* Main Content (Figma Node 566:1747) */}
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-16 pb-[48px]">
+          {/* Left Column: James Carter narrative (Node 566:1739) */}
+          <div className="flex flex-col gap-6 items-start max-w-[500px]">
+            <h3 className="font-serif font-medium text-[#07183d] text-2xl lg:text-[32px] uppercase tracking-normal">
+              James Carter
+            </h3>
+            <p className="font-sans font-normal text-base sm:text-lg lg:text-[20px] text-[#5b5b5b] leading-relaxed">
               Strategic legal counsel built around experience, discretion, and a clear understanding of what is at stake.
             </p>
-
-            <p className="font-serif italic text-base lg:text-lg text-[#cba05d] pt-2">
-              &ldquo;Your Case. Your Privacy. Our Commitment.&rdquo;
+            <p className="font-serif font-normal text-lg lg:text-[20px] text-[#07183d]">
+              Your Case. Your Privacy. Our Commitment.
             </p>
           </div>
 
-          {/* Col 2: Navigation Links (3 Cols) */}
-          <div className="md:col-span-3 flex flex-col items-start gap-4">
-            <span className="font-sans font-semibold text-xs text-[#cba05d] tracking-[2.5px] uppercase mb-1">
-              Explore
-            </span>
-            <ul className="flex flex-col gap-3 font-sans font-light text-sm text-[#4d4d4d]">
-              {[
-                { label: "Practice Areas", target: "practice-areas" },
-                { label: "About", target: "introduction" },
-                { label: "Why Choose Us", target: "why-us" },
-                { label: "How It Works", target: "how-it-works" },
-                { label: "Attorney Profile", target: "attorney" },
-                { label: "Testimonials", target: "testimonials" },
-                { label: "FAQ", target: "faq" },
-                { label: "Contact", target: "contact" },
-              ].map((item) => (
-                <li
-                  key={item.label}
-                  onClick={() => scrollTo(item.target)}
-                  className="hover:text-[#cba05d] transition-colors cursor-pointer"
+          {/* Right Columns: Explore + Get in Touch (Node 566:1746) */}
+          <div className="flex flex-col sm:flex-row gap-10 sm:gap-14 lg:gap-[56px] items-start">
+            {/* Explore (Node 566:1737) */}
+            <div className="flex flex-col gap-6 sm:gap-8 items-start w-full sm:w-[180px] lg:w-[200px]">
+              <h4 className="font-sans font-semibold text-[#07183d] text-lg lg:text-[20px] uppercase tracking-wider">
+                Explore
+              </h4>
+              <ul className="flex flex-col items-start w-full font-sans text-base text-[#808080]">
+                {[
+                  { label: "Practice Areas", target: "practice-areas" },
+                  { label: "About", target: "introduction" },
+                  { label: "FAQ", target: "faq" },
+                  { label: "Testimonials", target: "testimonials" },
+                  { label: "Contact", target: "contact" },
+                ].map((link) => (
+                  <li key={link.target} className="py-2 w-full">
+                    <button
+                      onClick={() => scrollTo(link.target)}
+                      className="text-[#808080] hover:text-[#07183d] transition-colors cursor-pointer text-left select-none"
+                    >
+                      {link.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Get in Touch (Node 566:1706) */}
+            <div className="flex flex-col gap-6 sm:gap-8 items-start">
+              <h4 className="font-sans font-semibold text-[#07183d] text-lg lg:text-[20px] uppercase tracking-wider">
+                Get in Touch
+              </h4>
+              <div className="flex flex-col gap-3.5 items-start font-sans text-base text-[#808080]">
+                <a
+                  href="tel:2125550147"
+                  className="flex items-center gap-2.5 py-1 text-[#808080] hover:text-[#07183d] transition-colors group cursor-pointer"
                 >
-                  {item.label}
-                </li>
-              ))}
-            </ul>
-          </div>
+                  <Phone className="w-4 h-4 text-[#808080] group-hover:text-[#07183d] shrink-0" />
+                  <span>(212) 555-0147</span>
+                </a>
 
-          {/* Col 3: Direct Contact Details (4 Cols) */}
-          <div className="md:col-span-4 flex flex-col items-start gap-4">
-            <span className="font-sans font-semibold text-xs text-[#cba05d] tracking-[2.5px] uppercase mb-1">
-              Get in Touch
-            </span>
-            <div className="flex flex-col gap-4 font-sans font-light text-sm text-[#4d4d4d]">
-              <a
-                href="tel:2125550147"
-                className="flex items-center gap-3.5 hover:text-[#cba05d] transition-colors group"
-              >
-                <div className="w-9 h-9 rounded-lg bg-neutral-200/60 flex items-center justify-center shrink-0 group-hover:bg-[#cba05d]/20 transition-colors">
-                  <PhoneCall className="w-4 h-4 text-[#cba05d]" />
-                </div>
-                <span>(212) 555-0147</span>
-              </a>
+                <a
+                  href="mailto:JamesCarter@gmail.com"
+                  className="flex items-center gap-2.5 py-1 text-[#808080] hover:text-[#07183d] transition-colors group cursor-pointer"
+                >
+                  <Mail className="w-4 h-4 text-[#808080] group-hover:text-[#07183d] shrink-0" />
+                  <span>JamesCarter@gmail.com</span>
+                </a>
 
-              <a
-                href="mailto:contact@carterlaw.com"
-                className="flex items-center gap-3.5 hover:text-[#cba05d] transition-colors group"
-              >
-                <div className="w-9 h-9 rounded-lg bg-neutral-200/60 flex items-center justify-center shrink-0 group-hover:bg-[#cba05d]/20 transition-colors">
-                  <Mail className="w-4 h-4 text-[#cba05d]" />
+                <div className="flex items-start gap-2.5 py-1 text-[#808080] max-w-[250px]">
+                  <MapPin className="w-4 h-4 text-[#808080] shrink-0 mt-1" />
+                  <span className="leading-normal">
+                    400 Madison Avenue, Suite 1800, New York, NY
+                  </span>
                 </div>
-                <span>contact@carterlaw.com</span>
-              </a>
-
-              <div className="flex items-start gap-3.5">
-                <div className="w-9 h-9 rounded-lg bg-neutral-200/60 flex items-center justify-center shrink-0 mt-0.5">
-                  <MapPin className="w-4 h-4 text-[#cba05d]" />
-                </div>
-                <span className="leading-relaxed">
-                  350 Fifth Avenue, 42nd Floor,
-                  <br />
-                  New York, NY 10118
-                </span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar: Copyright & Legal Policies */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans font-light text-xs text-[#808080]">
-          <p>© {new Date().getFullYear()} James Carter. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <button
-              onClick={() => scrollTo("faq")}
-              className="hover:text-[#cba05d] transition-colors cursor-pointer"
-            >
-              Privacy Policy
-            </button>
-            <span>•</span>
-            <button
-              onClick={() => scrollTo("faq")}
-              className="hover:text-[#cba05d] transition-colors cursor-pointer"
-            >
-              Terms of Service
-            </button>
-          </div>
+        {/* Bottom Bar: Copyright & Advertising Disclaimer (Node 566:1748) */}
+        <div className="border-t-[0.5px] border-[#59647d] pt-6 pb-20 sm:pb-24 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans font-normal text-sm sm:text-base text-[#59647d]">
+          <p className="text-center sm:text-left">
+            © 2026 James Carter, Attorneys at Law. All rights reserved.
+          </p>
+          <p className="text-center sm:text-right">
+            Attorney Advertising. Prior results do not guarantee a similar outcome.
+          </p>
         </div>
       </div>
     </footer>
