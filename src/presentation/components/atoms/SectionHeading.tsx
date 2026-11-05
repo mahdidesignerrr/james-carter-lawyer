@@ -48,21 +48,21 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   };
 
   return (
-    <div className={`flex flex-col ${alignClass} w-full pb-4 lg:pb-10 ${className}`}>
+    <div className={`flex flex-col ${alignClass} w-full pb-4 lg:pb-8 ${className}`}>
       {badge && (
-        <div className="py-1 lg:py-2">
-          <span className="font-sans font-semibold text-[10px] sm:text-xs lg:text-base text-[#cba05d] tracking-[2.64px] uppercase select-none">
+        <div className="py-1 lg:py-1.5">
+          <span className="font-sans font-semibold text-xs sm:text-sm lg:text-[15px] text-[#cba05d] tracking-[2.64px] uppercase select-none">
             {badge}
           </span>
         </div>
       )}
       <h2
-        className={`font-serif font-medium text-2xl sm:text-3xl lg:text-[40px] leading-tight pt-1 pb-3 ${getTitleColor()}`}
+        className={`font-serif font-medium text-2xl sm:text-3xl lg:text-[40px] leading-[1.2] pt-1 pb-3 ${getTitleColor()}`}
       >
         {title}
       </h2>
       {subtitle && (
-        <p className={`font-sans font-normal text-xs sm:text-sm lg:text-xl max-w-3xl leading-relaxed ${getSubtitleColor()}`}>
+        <p className={`font-sans font-normal text-sm sm:text-base lg:text-[18px] xl:text-[20px] max-w-3xl leading-relaxed ${getSubtitleColor()}`}>
           {subtitle}
         </p>
       )}

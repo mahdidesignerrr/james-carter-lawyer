@@ -27,15 +27,15 @@ export const IntroductionSection: React.FC = () => {
 
           {/* Right Column: Narrative & Benefits with Balanced Spacing */}
           <div className="flex flex-col items-start w-full">
-            <span className="font-sans font-semibold text-base text-[#cba05d] tracking-[2.64px] uppercase py-1 select-none">
+            <span className="font-sans font-semibold text-xs sm:text-sm lg:text-[15px] text-[#cba05d] tracking-[2.64px] uppercase py-1 select-none">
               Introduction
             </span>
 
-            <h2 className="font-serif font-medium text-[40px] text-[#161616] leading-tight pt-2 pb-3">
+            <h2 className="font-serif font-medium text-2xl sm:text-3xl lg:text-[40px] text-[#161616] leading-[1.2] pt-2 pb-3">
               Your Case Deserves More Than Legal Advice
             </h2>
 
-            <p className="font-sans font-normal text-xl text-[#808080] leading-relaxed pb-3">
+            <p className="font-sans font-normal text-base sm:text-lg lg:text-[20px] text-[#808080] leading-relaxed pb-3">
               Every legal matter comes with its own challenges. We listen
               carefully, assess what&apos;s at stake, and build a strategy
               designed around your goals not a one size fits all approach.

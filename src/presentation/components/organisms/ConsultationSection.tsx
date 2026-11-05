@@ -156,8 +156,8 @@ export const ConsultationSection: React.FC = () => {
                   value={formData.message}
                   onChange={(e) => updateField("message", e.target.value)}
                   placeholder="Tell us a little about your situation…"
-                  className={`w-full h-[150px] bg-[#07183d] border rounded-lg p-5 text-white placeholder-[#b2b7c3] text-base font-medium resize-none focus:outline-none transition-colors ${
-                    errors.message ? "border-red-400" : "border-[#b2b7c3]/80 focus:border-white"
+                  className={`w-full h-[140px] bg-white/[0.04] border rounded-lg p-4 text-white placeholder-[#8d95a6] text-base font-normal resize-none focus:outline-none focus:bg-[#394664]/50 transition-all ${
+                    errors.message ? "border-red-400" : "border-[#8d95a6]/60 focus:border-white"
                   }`}
                 />
                 {errors.message && (
@@ -174,21 +174,21 @@ export const ConsultationSection: React.FC = () => {
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="font-sans text-base lg:text-[18px] text-white mb-2 block font-normal">
-                      Phone <span className="text-xs text-white/70">(optional)</span>
+                    <label className="font-sans text-sm sm:text-base text-white/90 mb-2 block font-normal">
+                      Phone <span className="text-xs text-[#8d95a6]">(optional)</span>
                     </label>
                     <input
                       type="tel"
                       name="phone"
                       value={formData.phone || ""}
                       onChange={(e) => updateField("phone", e.target.value)}
-                      placeholder="+40 390 254 046"
-                      className="w-full h-14 bg-[#394664] border border-white focus:border-white rounded-lg px-4 text-white placeholder-white/50 text-base focus:outline-none transition-colors"
+                      placeholder="+1 (555) 000-0000"
+                      className="w-full h-14 bg-white/[0.04] border border-[#8d95a6]/60 focus:border-white focus:bg-[#394664]/50 rounded-lg px-4 text-white placeholder-[#8d95a6] text-base focus:outline-none transition-all"
                     />
                   </div>
 
                   <div>
-                    <label className="font-sans text-base lg:text-[18px] text-[#8d95a6] mb-2 block font-normal">
+                    <label className="font-sans text-sm sm:text-base text-white/90 mb-2 block font-normal">
                       Full Name
                     </label>
                     <input
@@ -196,9 +196,9 @@ export const ConsultationSection: React.FC = () => {
                       name="fullName"
                       value={formData.fullName}
                       onChange={(e) => updateField("fullName", e.target.value)}
-                      placeholder="David"
-                      className={`w-full h-14 bg-transparent border-2 rounded-lg px-4 text-white placeholder-[#8d95a6] text-base focus:border-white focus:outline-none transition-colors ${
-                        errors.fullName ? "border-red-400" : "border-[#8d95a6]"
+                      placeholder="e.g. David Miller"
+                      className={`w-full h-14 bg-white/[0.04] border rounded-lg px-4 text-white placeholder-[#8d95a6] text-base focus:border-white focus:bg-[#394664]/50 focus:outline-none transition-all ${
+                        errors.fullName ? "border-red-400" : "border-[#8d95a6]/60"
                       }`}
                     />
                     {errors.fullName && (
