@@ -18,7 +18,7 @@ export const FaqItem: React.FC<FaqItemProps> = ({
   return (
     <div
       className={`border-b border-[#e6e8ec] transition-colors ${
-        isOpen ? "bg-neutral-50/60" : "bg-[#fefefe]"
+        isOpen ? "bg-neutral-50/70" : "bg-[#fefefe]"
       } ${className}`}
     >
       <button
@@ -29,15 +29,15 @@ export const FaqItem: React.FC<FaqItemProps> = ({
         <span className="font-sans font-medium text-base sm:text-lg lg:text-xl text-[#161616] group-hover:text-[#cba05d] transition-colors pr-4">
           {item.question}
         </span>
-        {/* Prominent Circular Chevron Badge (36x36 on mobile, 44x44 on desktop) */}
+        {/* Prominent High-Visibility Circular Chevron Badge */}
         <div
-          className={`shrink-0 w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 rounded-full flex items-center justify-center transition-all duration-300 border ${
+          className={`shrink-0 w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full flex items-center justify-center transition-all duration-300 border ${
             isOpen
               ? "bg-[#cba05d] text-[#030a1a] border-[#cba05d] rotate-180 shadow-md"
-              : "bg-neutral-100 text-[#07183d] border-neutral-200 group-hover:bg-[#cba05d]/15 group-hover:border-[#cba05d]/50 group-hover:text-[#cba05d]"
+              : "bg-neutral-100 text-[#07183d] border-neutral-300 group-hover:bg-[#cba05d]/20 group-hover:border-[#cba05d] group-hover:text-[#cba05d]"
           }`}
         >
-          <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.5]" />
+          <ChevronDown className="w-6 h-6 sm:w-7 sm:h-7 stroke-[2.5]" />
         </div>
       </button>
 
@@ -48,8 +48,8 @@ export const FaqItem: React.FC<FaqItemProps> = ({
         }`}
       >
         <div className="overflow-hidden">
-          <div className="px-4 lg:px-8 pb-5 lg:pb-6">
-            <p className="font-sans font-light text-sm sm:text-base text-[#666666] leading-relaxed max-w-3xl">
+          <div className="px-4 lg:px-8 pb-5 lg:pb-7">
+            <p className="font-sans font-light text-sm sm:text-base lg:text-lg text-[#666666] leading-relaxed max-w-3xl">
               {item.answer}
             </p>
           </div>

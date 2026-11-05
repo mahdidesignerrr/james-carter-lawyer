@@ -15,7 +15,7 @@ export const ChecklistItem: React.FC<ChecklistItemProps> = ({
   const isDark = theme === "dark";
 
   return (
-    <div className={`flex items-center gap-3 py-2 w-full ${className}`}>
+    <div className={`flex items-center gap-3 py-1 w-full select-none ${className}`}>
       <div className="relative shrink-0 w-6 h-6 flex items-center justify-center">
         <Image
           src="/assets/icons/tick-square.svg"
@@ -26,7 +26,7 @@ export const ChecklistItem: React.FC<ChecklistItemProps> = ({
         />
       </div>
       <p
-        className={`font-sans font-light text-base lg:text-[20px] leading-normal ${
+        className={`font-sans font-normal text-base lg:text-[19px] leading-normal ${
           isDark ? "text-[#fefefe]" : "text-[#161616]"
         }`}
       >

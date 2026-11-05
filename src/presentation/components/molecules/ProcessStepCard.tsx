@@ -34,14 +34,14 @@ export const ProcessStepCard: React.FC<ProcessStepCardProps> = ({
     <div
       className={`group bg-[#fefefe] border-2 border-[#e6e8ec] p-6 lg:p-8 rounded-xl ${desktopCornerClass} flex flex-col items-start gap-5 lg:gap-7 transition-all duration-300 hover:border-[#cba05d] hover:shadow-xl hover:-translate-y-1 w-full ${className}`}
     >
-      {/* Prominent High-Visibility Vector Icon Badge (60x60 on mobile, 68x68 on desktop) */}
-      <div className="w-14 h-14 sm:w-16 sm:h-16 lg:w-[68px] lg:h-[68px] rounded-xl bg-[#cba05d]/15 border-2 border-[#cba05d]/40 flex items-center justify-center p-3 relative shrink-0 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#cba05d]/25 group-hover:border-[#cba05d] shadow-sm">
+      {/* High-Visibility Vector Icon Badge - Large, Bold & Crisp */}
+      <div className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-2xl bg-[#f4eada]/80 border-2 border-[#cba05d]/50 flex items-center justify-center p-3.5 relative shrink-0 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#f4eada] group-hover:border-[#cba05d] shadow-sm">
         <Image
           src={iconSrc}
           alt={step.title}
-          width={40}
-          height={40}
-          className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 object-contain drop-shadow"
+          width={48}
+          height={48}
+          className="w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain"
           priority
         />
       </div>

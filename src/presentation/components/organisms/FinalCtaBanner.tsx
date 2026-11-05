@@ -10,12 +10,13 @@ export const FinalCtaBanner: React.FC = () => {
   return (
     <section className="bg-[#fefefe] py-14 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-        <div className="bg-[#030a1a] rounded-3xl px-8 py-16 sm:p-16 lg:p-24 text-center flex flex-col items-center justify-center relative overflow-hidden shadow-2xl border border-white/10">
-          {/* Subtle background ambient gradient */}
-          <div className="absolute inset-0 bg-radial from-[#394664]/30 via-transparent to-transparent pointer-events-none" />
+        <div className="bg-[#07183d] rounded-3xl px-8 py-16 sm:p-16 lg:p-24 text-center flex flex-col items-center justify-center relative overflow-hidden shadow-2xl border border-white/10">
+          {/* Subtle Figma Decorative Circular Accents (Node 522:764 & 522:765) */}
+          <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full border border-[#cba05d]/20 pointer-events-none" />
+          <div className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full border border-[#cba05d]/20 pointer-events-none" />
 
           <div className="relative z-10 max-w-3xl flex flex-col items-center">
-            <span className="font-sans font-semibold text-xs lg:text-sm text-[#cba05d] tracking-[2.64px] uppercase py-2">
+            <span className="font-sans font-semibold text-xs lg:text-sm text-[#cba05d] tracking-[2.64px] uppercase py-2 select-none">
               When It Matters Most, Experience Matters
             </span>
 
