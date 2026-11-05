@@ -3,89 +3,65 @@
 import React from "react";
 import Image from "next/image";
 import { ATTORNEY_DATA } from "@/domain/attorney/attorney.constants";
-import { Button } from "../atoms/Button";
 import { useScrollNavigation } from "@/application/use-scroll-navigation.hook";
+import { ArrowRight } from "lucide-react";
 
 export const AttorneyProfileSection: React.FC = () => {
   const { scrollTo } = useScrollNavigation();
 
   return (
-    <section id="attorney" className="bg-[#fefefe] py-16 lg:py-32">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 xl:gap-24 items-center">
-          {/* Desktop Portrait Column: Pure, Executive Frame matching Figma Node 550:1327 */}
-          <div className="hidden lg:block lg:col-span-5 relative">
-            <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-neutral-200/90 bg-neutral-900">
+    <section id="attorney" className="bg-[#fefefe] py-16 sm:py-20 lg:py-[100px]">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-[80px]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-center">
+          {/* Portrait Column: Figma Node 550:1317 (w-[572px] h-[824px] rounded-[8px]) */}
+          <div className="lg:col-span-5 relative w-full flex justify-center lg:justify-start">
+            <div className="relative w-full max-w-[500px] lg:max-w-[572px] aspect-[572/760] sm:aspect-[572/800] rounded-[8px] overflow-hidden shadow-xl bg-neutral-900 border border-neutral-100">
               <Image
                 src={ATTORNEY_DATA.photoUrl}
                 alt={ATTORNEY_DATA.name}
                 fill
                 className="object-cover object-top"
-                sizes="(max-width: 1024px) 100vw, 42vw"
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                priority
               />
             </div>
           </div>
 
-          {/* Credentials Column with generous breathing room */}
-          <div className="lg:col-span-7 flex flex-col items-start w-full">
-            {/* Mobile Header with circular avatar */}
-            <div className="lg:hidden flex items-center gap-4 pb-6 w-full border-b border-neutral-100">
-              <div className="relative w-20 h-20 rounded-full overflow-hidden shrink-0 shadow-md border-2 border-[#cba05d]">
-                <Image
-                  src={ATTORNEY_DATA.photoUrl}
-                  alt={ATTORNEY_DATA.name}
-                  fill
-                  className="object-cover object-top"
-                />
-              </div>
-              <div className="flex flex-col items-start">
-                <span className="font-sans font-semibold text-[10px] text-[#cba05d] tracking-[2.64px] uppercase">
-                  Meet Your Attorney
-                </span>
-                <h2 className="font-serif font-medium text-2xl text-[#161616]">
-                  {ATTORNEY_DATA.name}
-                </h2>
-              </div>
-            </div>
-
-            {/* Desktop Section Header */}
-            <div className="hidden lg:flex flex-col items-start">
-              <span className="font-sans font-semibold text-base text-[#cba05d] tracking-[2.64px] uppercase py-2 select-none">
+          {/* Credentials Column: Figma Node 550:1318 */}
+          <div className="lg:col-span-7 flex flex-col items-start w-full lg:pl-6 xl:pl-10">
+            {/* Header: Meet Your Attorney + James Carter */}
+            <div className="flex flex-col items-start pb-6 lg:pb-8">
+              <span className="font-sans font-semibold text-sm lg:text-[16px] text-[#cba05d] tracking-[2.64px] uppercase select-none mb-2">
                 Meet Your Attorney
               </span>
-              <h2 className="font-serif font-medium text-4xl lg:text-5xl text-[#161616] leading-tight pb-6">
+              <h2 className="font-serif font-medium text-3xl sm:text-4xl lg:text-[40px] text-[#161616] leading-tight">
                 {ATTORNEY_DATA.name}
               </h2>
             </div>
 
-            {/* Structured Credentials */}
-            <div className="w-full divide-y divide-neutral-200/90 pt-2">
+            {/* Clean Structured Credentials (No Dividers, Exact Typography from Figma) */}
+            <div className="flex flex-col gap-6 lg:gap-7 w-full">
               {ATTORNEY_DATA.credentials.map((item, index) => (
-                <div
-                  key={index}
-                  className="py-4 lg:py-5 flex flex-col gap-1.5 transition-colors hover:bg-neutral-50/50 px-2 rounded-lg"
-                >
-                  <span className="font-sans font-medium text-xs lg:text-sm text-[#808080] tracking-[1.92px] uppercase">
+                <div key={index} className="flex flex-col items-start">
+                  <span className="font-sans font-light text-[12px] text-[#808080] tracking-[1.92px] uppercase select-none mb-1.5">
                     {item.label}
                   </span>
-                  <p className="font-sans font-light text-base lg:text-[21px] text-[#161616] leading-snug">
+                  <p className="font-sans font-light text-base sm:text-lg lg:text-[20px] text-[#363636] leading-snug">
                     {item.value}
                   </p>
                 </div>
               ))}
             </div>
 
-            {/* Action Button */}
-            <div className="pt-8 w-full sm:w-auto flex flex-col sm:flex-row items-center gap-4">
-              <Button
-                variant="navy"
-                size="lg"
-                showArrow
+            {/* Action CTA: View Attorney Profile -> (Figma Node 550:1327) */}
+            <div className="pt-8 lg:pt-10 w-full sm:w-auto">
+              <button
                 onClick={() => scrollTo("contact")}
-                className="w-full sm:w-auto justify-center shadow-lg hover:shadow-xl"
+                className="bg-[#07183d] hover:bg-[#030a1a] text-[#fefefe] px-6 py-4 rounded-[4px] font-sans font-normal text-base inline-flex items-center justify-center gap-2.5 transition-all shadow-md hover:shadow-lg active:scale-98 cursor-pointer w-full sm:w-auto"
               >
-                Book a Consultation With James
-              </Button>
+                <span>View Attorney Profile</span>
+                <ArrowRight className="w-5 h-5 text-[#fefefe] shrink-0" />
+              </button>
             </div>
           </div>
         </div>

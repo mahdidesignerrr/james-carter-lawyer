@@ -31,23 +31,23 @@ export const PracticeAreasSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Bottom Banner: Not sure where your case fits? */}
-        <div className="mt-6 p-8 sm:p-12 lg:p-16 rounded-2xl bg-[#f4eada]/70 lg:bg-[#05112b] border border-neutral-200 lg:border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 lg:gap-12 shadow-xl">
-          <div className="flex flex-col max-w-2xl">
-            <h4 className="font-serif font-medium text-xl sm:text-2xl lg:text-3xl text-[#161616] lg:text-[#fefefe] pb-2.5">
+        {/* Lets Get Started (Figma Node 522:696) - Clean unboxed callout */}
+        <div className="pt-8 sm:pt-12 flex flex-col md:flex-row md:items-center justify-between gap-6 border-t border-black/10 lg:border-white/15">
+          <div className="flex flex-col items-start gap-2 max-w-2xl">
+            <h4 className="font-sans font-normal text-xl sm:text-2xl lg:text-[24px] text-[#5c4f39] lg:text-[#fefefe]">
               Not sure where your case fits?
             </h4>
-            <p className="font-sans font-light text-sm sm:text-base lg:text-lg text-[#666666] lg:text-[#fefefe]/80 leading-relaxed">
+            <p className="font-sans font-normal text-sm sm:text-base lg:text-[16px] text-[#9c8561] lg:text-[#fefefe]/80 leading-relaxed">
               Start with a confidential consultation. We&apos;ll help you understand your options and next steps.
             </p>
           </div>
 
           <Button
             variant="gold"
-            size="lg"
+            size="md"
             showArrow
             onClick={() => scrollTo("contact")}
-            className="w-full md:w-auto shrink-0 justify-center shadow-md hover:shadow-lg"
+            className="w-full md:w-auto shrink-0 justify-center shadow-md hover:shadow-lg rounded-[4px]"
           >
             Book a Confidential Consultation
           </Button>
