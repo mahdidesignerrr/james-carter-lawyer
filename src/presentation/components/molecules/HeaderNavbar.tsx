@@ -178,13 +178,6 @@ export const HeaderNavbar: React.FC = () => {
                 </button>
               </div>
             </div>
-
-            {/* Bottom Subtle Brand Mark */}
-            <div className="pt-12 text-center select-none opacity-60">
-              <span className="font-serif italic text-xs text-[#fefefe]/70">
-                James Carter • Attorney at Law
-              </span>
-            </div>
           </div>
         </div>
       )}

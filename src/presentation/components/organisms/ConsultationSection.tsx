@@ -26,62 +26,70 @@ export const ConsultationSection: React.FC = () => {
   } = useConsultationForm();
 
   return (
-    <section id="contact" className="w-full relative overflow-hidden bg-[#fefefe]">
-      <div className="grid grid-cols-1 lg:grid-cols-2 w-full">
-        {/* Left Column: White Background (Figma Node 522:767) */}
-        <div className="bg-[#ffffff] flex flex-col justify-between py-16 sm:py-20 lg:py-24 px-6 sm:px-12 lg:px-20 xl:px-24">
+    <section id="contact" className="w-full relative overflow-hidden bg-white">
+      {/* Dual Full-Bleed Background for Ultra-Wide Displays */}
+      <div className="absolute inset-0 pointer-events-none hidden lg:grid lg:grid-cols-2">
+        <div className="bg-white" />
+        <div className="bg-[#07183d]" />
+      </div>
+
+      {/* Main Container constrained to Figma 1440px architecture */}
+      <div className="relative z-10 max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2">
+        {/* Left Column: White Side (Figma Node 522:767) */}
+        <div className="bg-white flex flex-col justify-between py-16 sm:py-20 lg:py-20 px-6 sm:px-12 lg:px-16 xl:px-20">
+          {/* Top Title & Narrative */}
           <div>
-            <span className="font-sans font-semibold text-xs sm:text-sm text-[#cba05d] tracking-[2.64px] uppercase select-none">
+            <span className="font-sans font-semibold text-xs sm:text-sm lg:text-[16px] text-[#cba05d] tracking-[2.64px] uppercase select-none block">
               CONSULTATION BOOKING
             </span>
 
-            <h2 className="font-serif font-medium text-3xl sm:text-4xl lg:text-[44px] text-[#161616] leading-tight pt-3 pb-4">
+            <h2 className="font-serif font-medium text-3xl sm:text-4xl lg:text-[40px] text-[#161616] leading-[1.2] pt-2 pb-4">
               Take the First Step With Confidence.
             </h2>
 
-            <p className="font-sans font-normal text-base sm:text-lg text-[#161616] leading-relaxed pb-8 max-w-lg">
+            <p className="font-sans font-normal text-base sm:text-lg lg:text-[20px] text-[#161616] leading-relaxed pb-6 max-w-[480px]">
               Tell us a little about your situation and choose a convenient time for a confidential consultation.
             </p>
 
             {/* Privacy Assurance Bar with Gold Vertical Accent (Node 522:771) */}
-            <div className="border-l-2 border-[#cba05d] pl-4 py-1 mb-12 lg:mb-20">
-              <p className="font-sans font-normal text-base text-[#161616]">
+            <div className="border-l-2 border-[#cba05d] pl-5 py-2 my-8 lg:my-10">
+              <p className="font-sans font-medium text-base text-[#161616] leading-snug">
                 Your privacy comes first
               </p>
-              <p className="font-sans font-light text-sm text-[#808080]">
+              <p className="font-sans font-normal text-sm lg:text-base text-[#808080] leading-snug">
                 All information you share is kept strictly confidential.
               </p>
             </div>
           </div>
 
-          {/* Direct Office Details without Icon Boxes (Node 522:774) */}
-          <div className="flex flex-col gap-8 pt-4">
+          {/* Direct Office Details (Node 522:774) */}
+          <div className="flex flex-col gap-6 lg:gap-8 pt-6 border-t border-neutral-100 lg:border-transparent">
             <div>
-              <span className="font-sans text-xs text-[#808080] uppercase tracking-wider block mb-1">
+              <span className="font-serif text-sm lg:text-base text-[#aaaaaa] block mb-1 font-normal">
                 Contact
               </span>
               <a
                 href="tel:2125550147"
-                className="font-sans font-normal text-2xl lg:text-[28px] text-[#161616] hover:text-[#cba05d] transition-colors"
+                className="font-sans font-light text-2xl lg:text-[24px] text-[#07183d] hover:text-[#cba05d] transition-colors"
               >
                 (212) 555-0147
               </a>
             </div>
 
             <div>
-              <span className="font-sans text-xs text-[#808080] uppercase tracking-wider block mb-1">
+              <span className="font-serif text-sm lg:text-base text-[#aaaaaa] block mb-1 font-normal">
                 Working Hours
               </span>
-              <span className="font-sans font-normal text-base text-[#161616]">
+              <span className="font-sans font-normal text-base text-[#07183d] block">
                 Mon–Fri · 9:00 AM – 6:00 PM
               </span>
             </div>
 
             <div>
-              <span className="font-sans text-xs text-[#808080] uppercase tracking-wider block mb-1">
+              <span className="font-serif text-sm lg:text-base text-[#aaaaaa] block mb-1 font-normal">
                 Office Address
               </span>
-              <span className="font-sans font-normal text-lg lg:text-xl text-[#161616] leading-relaxed">
+              <span className="font-sans font-light text-xl lg:text-[24px] text-[#07183d] leading-snug block max-w-sm">
                 400 Madison Avenue, Suite 1800, New York, NY
               </span>
             </div>
@@ -89,9 +97,9 @@ export const ConsultationSection: React.FC = () => {
         </div>
 
         {/* Right Column: Solid Dark Navy (Figma Node 522:778) */}
-        <div className="bg-[#07183d] text-white py-16 sm:py-20 lg:py-24 px-6 sm:px-12 lg:px-20 xl:px-24 flex flex-col justify-center">
+        <div className="bg-[#07183d] text-white py-16 sm:py-20 lg:py-20 px-6 sm:px-12 lg:px-16 xl:px-20 flex flex-col justify-center">
           {isSubmitted ? (
-            <div className="flex flex-col items-center justify-center text-center py-16 animate-in fade-in duration-300">
+            <div className="flex flex-col items-center justify-center text-center py-16 animate-in fade-in duration-300 max-w-[560px]">
               <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center text-[#cba05d] mb-4 border border-white/20">
                 <CheckCircle2 className="w-10 h-10" />
               </div>
@@ -104,19 +112,19 @@ export const ConsultationSection: React.FC = () => {
               <button
                 type="button"
                 onClick={reset}
-                className="py-3 px-8 rounded-md bg-white text-[#161616] font-medium text-base hover:bg-neutral-100 transition-colors"
+                className="py-3 px-8 rounded-md bg-white text-[#161616] font-medium text-base hover:bg-neutral-100 transition-colors cursor-pointer"
               >
                 Book Another Consultation
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col gap-7 w-full max-w-xl mx-auto lg:mx-0" noValidate>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-8 w-full max-w-[560px]" noValidate>
               {/* Question 1: What legal issue do you need help with? */}
               <div>
-                <h3 className="font-sans font-medium text-lg sm:text-xl text-white pb-3.5">
+                <h3 className="font-sans font-medium text-xl lg:text-[24px] text-white mb-4">
                   What legal issue do you need help with?
                 </h3>
-                <div className="flex flex-wrap gap-2.5">
+                <div className="flex flex-wrap gap-2.5 sm:gap-3">
                   {PRACTICE_CHIPS.map((chip) => {
                     const isSelected = formData.practiceArea === chip;
                     return (
@@ -124,10 +132,10 @@ export const ConsultationSection: React.FC = () => {
                         key={chip}
                         type="button"
                         onClick={() => updateField("practiceArea", chip)}
-                        className={`px-4 py-2.5 rounded-lg text-sm font-sans transition-all duration-200 cursor-pointer ${
+                        className={`px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-lg text-sm sm:text-[15px] font-medium transition-all duration-200 cursor-pointer ${
                           isSelected
                             ? "bg-[#394664] text-white border border-transparent shadow-sm"
-                            : "bg-transparent text-[#b2b7c3] border border-white/20 hover:border-white/40"
+                            : "bg-transparent text-[#b2b7c3] border border-[#b2b7c3]/80 hover:border-white hover:text-white"
                         }`}
                       >
                         {chip}
@@ -139,7 +147,7 @@ export const ConsultationSection: React.FC = () => {
 
               {/* Question 2: Is there anything else you’d like us to know? */}
               <div>
-                <h3 className="font-sans font-medium text-lg sm:text-xl text-white pb-3.5">
+                <h3 className="font-sans font-medium text-xl lg:text-[24px] text-white mb-3">
                   Is there anything else you’d like us to know?
                 </h3>
                 <textarea
@@ -148,8 +156,8 @@ export const ConsultationSection: React.FC = () => {
                   value={formData.message}
                   onChange={(e) => updateField("message", e.target.value)}
                   placeholder="Tell us a little about your situation…"
-                  className={`w-full bg-[#05112b]/60 border rounded-lg p-4 text-white text-base placeholder-white/35 focus:outline-none transition-colors resize-none ${
-                    errors.message ? "border-red-400" : "border-white/20 focus:border-white"
+                  className={`w-full h-[150px] bg-[#07183d] border rounded-lg p-5 text-white placeholder-[#b2b7c3] text-base font-medium resize-none focus:outline-none transition-colors ${
+                    errors.message ? "border-red-400" : "border-[#b2b7c3]/80 focus:border-white"
                   }`}
                 />
                 {errors.message && (
@@ -161,13 +169,13 @@ export const ConsultationSection: React.FC = () => {
 
               {/* Question 3: Enter your details to book your consultation */}
               <div>
-                <h3 className="font-sans font-medium text-lg sm:text-xl text-white pb-3.5">
+                <h3 className="font-sans font-medium text-xl lg:text-[24px] text-white mb-3">
                   Enter your details to book your consultation.
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="font-sans text-sm text-white mb-2 block">
-                      Phone <span className="text-xs text-white/50">(optional)</span>
+                    <label className="font-sans text-base lg:text-[18px] text-white mb-2 block font-normal">
+                      Phone <span className="text-xs text-white/70">(optional)</span>
                     </label>
                     <input
                       type="tel"
@@ -175,12 +183,12 @@ export const ConsultationSection: React.FC = () => {
                       value={formData.phone || ""}
                       onChange={(e) => updateField("phone", e.target.value)}
                       placeholder="+40 390 254 046"
-                      className="w-full bg-[#394664]/60 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/35 focus:border-white focus:outline-none transition-colors"
+                      className="w-full h-14 bg-[#394664] border border-white focus:border-white rounded-lg px-4 text-white placeholder-white/50 text-base focus:outline-none transition-colors"
                     />
                   </div>
 
                   <div>
-                    <label className="font-sans text-sm text-white mb-2 block">
+                    <label className="font-sans text-base lg:text-[18px] text-[#8d95a6] mb-2 block font-normal">
                       Full Name
                     </label>
                     <input
@@ -189,8 +197,8 @@ export const ConsultationSection: React.FC = () => {
                       value={formData.fullName}
                       onChange={(e) => updateField("fullName", e.target.value)}
                       placeholder="David"
-                      className={`w-full bg-[#05112b] border rounded-lg px-4 py-3 text-white placeholder-white/35 focus:border-white focus:outline-none transition-colors ${
-                        errors.fullName ? "border-red-400" : "border-white/20"
+                      className={`w-full h-14 bg-transparent border-2 rounded-lg px-4 text-white placeholder-[#8d95a6] text-base focus:border-white focus:outline-none transition-colors ${
+                        errors.fullName ? "border-red-400" : "border-[#8d95a6]"
                       }`}
                     />
                     {errors.fullName && (
@@ -202,12 +210,12 @@ export const ConsultationSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Submit CTA: Book a Consultation (White Button, Black Text, No Arrow) */}
+              {/* Submit CTA: Book a Consultation (White Button, Black Text, No Arrow - Node 522:804) */}
               <div className="pt-2">
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 px-6 rounded-md bg-white hover:bg-neutral-100 text-[#161616] font-sans font-medium text-lg shadow-md transition-colors cursor-pointer active:scale-98"
+                  className="w-full h-[60px] rounded-[4px] bg-white hover:bg-neutral-100 text-[#161616] font-sans font-medium text-lg lg:text-xl shadow-lg transition-all cursor-pointer active:scale-[0.99] flex items-center justify-center"
                 >
                   {isSubmitting ? "Submitting..." : "Book a Consultation"}
                 </button>
