@@ -11,7 +11,7 @@ export const HeroSection: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[90vh] lg:min-h-screen w-full flex flex-col justify-center overflow-hidden bg-[#07183d] pt-28 sm:pt-32 lg:pt-36 pb-20 lg:pb-32"
+      className="relative min-h-[90vh] lg:min-h-[calc(100vh+120px)] w-full flex flex-col justify-center overflow-hidden bg-[#07183d] pt-28 sm:pt-32 lg:pt-36 pb-20 lg:pb-[140px]"
     >
       {/* Background imagery: Clean, Natural Lighting without Bottom Shadow */}
       <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
