@@ -70,7 +70,7 @@ export const HowItWorksSection: React.FC = () => {
   ];
 
   return (
-    <section id="how-it-works" className="bg-[#e6e8ec] py-16 lg:py-28">
+    <section id="how-it-works" className="bg-[#e6e8ec] scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28 py-16 lg:py-28">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         <SectionHeading
           badge="HOW IT WORKS"

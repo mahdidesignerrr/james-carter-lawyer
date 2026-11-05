@@ -26,7 +26,7 @@ export const ConsultationSection: React.FC = () => {
   } = useConsultationForm();
 
   return (
-    <section id="contact" className="w-full relative overflow-hidden bg-white">
+    <section id="contact" className="w-full relative overflow-hidden bg-white scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28">
       {/* Dual Full-Bleed Background for Ultra-Wide Displays */}
       <div className="absolute inset-0 pointer-events-none hidden lg:grid lg:grid-cols-2">
         <div className="bg-white" />

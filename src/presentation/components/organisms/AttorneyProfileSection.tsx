@@ -10,7 +10,7 @@ export const AttorneyProfileSection: React.FC = () => {
   const { scrollTo } = useScrollNavigation();
 
   return (
-    <section id="attorney" className="bg-[#fefefe] py-16 sm:py-20 lg:py-[100px]">
+    <section id="attorney" className="bg-[#fefefe] scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28 py-16 sm:py-20 lg:py-[100px]">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-[80px]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-center">
           {/* Portrait Column: Figma Node 550:1317 (w-[572px] h-[824px] rounded-[8px]) */}

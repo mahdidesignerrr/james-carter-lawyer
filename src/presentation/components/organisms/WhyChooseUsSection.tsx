@@ -55,7 +55,7 @@ export const WhyChooseUsSection: React.FC = () => {
   return (
     <section
       id="why-us"
-      className="bg-[#07183d] lg:bg-[#fefefe] py-20 sm:py-24 lg:py-[120px] transition-colors duration-300"
+      className="bg-[#07183d] lg:bg-[#fefefe] scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28 py-20 sm:py-24 lg:py-[120px] transition-colors duration-300"
     >
       <div className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-[80px]">
         {/* Heading: Corrected from invisible white to crisp dark-to-light theme */}

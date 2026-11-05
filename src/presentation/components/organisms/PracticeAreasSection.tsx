@@ -13,7 +13,7 @@ export const PracticeAreasSection: React.FC = () => {
   return (
     <section
       id="practice-areas"
-      className="bg-[#fefefe] lg:bg-[#07183d] py-16 lg:py-32 relative transition-colors duration-300"
+      className="bg-[#fefefe] lg:bg-[#07183d] scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28 py-16 lg:py-32 relative transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
         {/* Section Heading with responsive theme */}

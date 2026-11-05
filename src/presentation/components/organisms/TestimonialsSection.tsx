@@ -12,7 +12,7 @@ export const TestimonialsSection: React.FC = () => {
   return (
     <section
       id="testimonials"
-      className="bg-[#e6e8ec] py-16 sm:py-20 lg:py-[100px]"
+      className="bg-[#e6e8ec] scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28 py-16 sm:py-20 lg:py-[100px]"
     >
       <div className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-[80px]">
         {/* Section Heading matching Figma Node 550:1445 */}

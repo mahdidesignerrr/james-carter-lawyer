@@ -10,7 +10,7 @@ export const FaqSection: React.FC = () => {
   const { toggle, isOpen } = useFaqAccordion("faq-cost");
 
   return (
-    <section id="faq" className="bg-[#fefefe] py-16 lg:py-28">
+    <section id="faq" className="bg-[#fefefe] scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28 py-16 lg:py-28">
       <div className="max-w-5xl mx-auto px-6 md:px-12">
         <SectionHeading
           badge="FAQ"
