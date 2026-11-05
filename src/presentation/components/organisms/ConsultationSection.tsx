@@ -2,12 +2,17 @@
 
 import React from "react";
 import { useConsultationForm } from "@/application/use-consultation-form.hook";
-import { PRACTICE_AREAS } from "@/domain/practice-area/practice-area.constants";
-import { InputField } from "../atoms/InputField";
-import { TextareaField } from "../atoms/TextareaField";
-import { Button } from "../atoms/Button";
-import { ConsultationCalendar } from "../molecules/ConsultationCalendar";
-import { CheckCircle2, ShieldCheck, PhoneCall, Clock, MapPin } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
+
+const PRACTICE_CHIPS = [
+  "Family Law",
+  "Criminal Defense",
+  "Immigration",
+  "Corporate Law",
+  "Civil Litigation",
+  "Real Estate",
+  "Other",
+];
 
 export const ConsultationSection: React.FC = () => {
   const {
@@ -21,204 +26,194 @@ export const ConsultationSection: React.FC = () => {
   } = useConsultationForm();
 
   return (
-    <section id="contact" className="bg-[#fefefe] py-16 lg:py-28 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 xl:gap-20 items-start">
-          {/* Left Column: Narrative, Privacy Assurance & Direct Office Details (Figma Node 522:767) */}
-          <div className="lg:col-span-5 flex flex-col items-start pt-2">
-            <span className="font-sans font-semibold text-xs lg:text-sm text-[#cba05d] tracking-[2.64px] uppercase py-1 select-none">
+    <section id="contact" className="w-full relative overflow-hidden bg-[#fefefe]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 w-full">
+        {/* Left Column: White Background (Figma Node 522:767) */}
+        <div className="bg-[#ffffff] flex flex-col justify-between py-16 sm:py-20 lg:py-24 px-6 sm:px-12 lg:px-20 xl:px-24">
+          <div>
+            <span className="font-sans font-semibold text-xs sm:text-sm text-[#cba05d] tracking-[2.64px] uppercase select-none">
               CONSULTATION BOOKING
             </span>
 
-            <h2 className="font-serif font-medium text-3xl sm:text-4xl lg:text-[44px] text-[#161616] leading-tight pt-2 pb-4">
+            <h2 className="font-serif font-medium text-3xl sm:text-4xl lg:text-[44px] text-[#161616] leading-tight pt-3 pb-4">
               Take the First Step With Confidence.
             </h2>
 
-            <p className="font-sans font-normal text-base sm:text-lg text-[#808080] leading-relaxed pb-6">
+            <p className="font-sans font-normal text-base sm:text-lg text-[#161616] leading-relaxed pb-8 max-w-lg">
               Tell us a little about your situation and choose a convenient time for a confidential consultation.
             </p>
 
-            {/* Privacy Callout Bar (Node 522:771) */}
-            <div className="border-l-2 border-[#cba05d] pl-4 py-2 mb-8 bg-[#fdfbf7] rounded-r-lg">
-              <p className="font-sans font-medium text-sm text-[#161616]">
-                Your privacy comes first.
+            {/* Privacy Assurance Bar with Gold Vertical Accent (Node 522:771) */}
+            <div className="border-l-2 border-[#cba05d] pl-4 py-1 mb-12 lg:mb-20">
+              <p className="font-sans font-normal text-base text-[#161616]">
+                Your privacy comes first
               </p>
-              <p className="font-sans font-light text-xs sm:text-sm text-[#808080]">
+              <p className="font-sans font-light text-sm text-[#808080]">
                 All information you share is kept strictly confidential.
               </p>
             </div>
+          </div>
 
-            {/* Direct Contact Info (Node 522:774) */}
-            <div className="flex flex-col gap-5 w-full pt-2 border-t border-neutral-200/80">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-[#cba05d]/15 flex items-center justify-center text-[#cba05d] shrink-0 mt-0.5">
-                  <PhoneCall className="w-5 h-5" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-sans text-xs text-[#808080] uppercase tracking-wider">Contact</span>
-                  <a href="tel:2125550147" className="font-sans font-medium text-base text-[#07183d] hover:text-[#cba05d] transition-colors">
-                    (212) 555-0147
-                  </a>
-                </div>
-              </div>
+          {/* Direct Office Details without Icon Boxes (Node 522:774) */}
+          <div className="flex flex-col gap-8 pt-4">
+            <div>
+              <span className="font-sans text-xs text-[#808080] uppercase tracking-wider block mb-1">
+                Contact
+              </span>
+              <a
+                href="tel:2125550147"
+                className="font-sans font-normal text-2xl lg:text-[28px] text-[#161616] hover:text-[#cba05d] transition-colors"
+              >
+                (212) 555-0147
+              </a>
+            </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-[#cba05d]/15 flex items-center justify-center text-[#cba05d] shrink-0 mt-0.5">
-                  <Clock className="w-5 h-5" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-sans text-xs text-[#808080] uppercase tracking-wider">Working Hours</span>
-                  <span className="font-sans font-normal text-sm sm:text-base text-[#07183d]">
-                    Mon–Fri · 9:00 AM – 6:00 PM
-                  </span>
-                </div>
-              </div>
+            <div>
+              <span className="font-sans text-xs text-[#808080] uppercase tracking-wider block mb-1">
+                Working Hours
+              </span>
+              <span className="font-sans font-normal text-base text-[#161616]">
+                Mon–Fri · 9:00 AM – 6:00 PM
+              </span>
+            </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-[#cba05d]/15 flex items-center justify-center text-[#cba05d] shrink-0 mt-0.5">
-                  <MapPin className="w-5 h-5" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-sans text-xs text-[#808080] uppercase tracking-wider">Office Address</span>
-                  <span className="font-sans font-normal text-sm sm:text-base text-[#07183d] leading-relaxed">
-                    400 Madison Avenue, Suite 1800, New York, NY
-                  </span>
-                </div>
-              </div>
+            <div>
+              <span className="font-sans text-xs text-[#808080] uppercase tracking-wider block mb-1">
+                Office Address
+              </span>
+              <span className="font-sans font-normal text-lg lg:text-xl text-[#161616] leading-relaxed">
+                400 Madison Avenue, Suite 1800, New York, NY
+              </span>
             </div>
           </div>
+        </div>
 
-          {/* Right Column: Dark Navy Booking Surface & Form (Figma Node 522:778) */}
-          <div className="lg:col-span-7 bg-[#07183d] border border-white/10 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xl w-full">
-            {isSubmitted ? (
-              <div className="flex flex-col items-center justify-center text-center py-12 animate-in fade-in duration-300">
-                <div className="w-16 h-16 rounded-full bg-[#cba05d]/20 flex items-center justify-center text-[#cba05d] mb-4 border border-[#cba05d]/40">
-                  <CheckCircle2 className="w-10 h-10" />
-                </div>
-                <h3 className="font-serif text-2xl lg:text-3xl text-[#fefefe] mb-2">
-                  Consultation Request Received
-                </h3>
-                <p className="font-sans text-neutral-300 max-w-lg mb-6 leading-relaxed text-sm sm:text-base">
-                  Thank you, <strong>{formData.fullName}</strong>. Your consultation request for{" "}
-                  <span className="text-[#cba05d] font-medium">{formData.practiceArea}</span>
-                  {formData.preferredDate && (
-                    <> on <strong>{formData.preferredDate.toLocaleDateString()}</strong> at <strong>{formData.preferredTimeSlot}</strong></>
-                  )}{" "}
-                  has been logged. We will send formal confirmation to <strong>{formData.email}</strong> shortly.
-                </p>
-
-                <div className="flex items-center gap-2 text-xs text-neutral-400 bg-white/5 px-4 py-2 rounded-full mb-6 border border-white/5">
-                  <ShieldCheck className="w-4 h-4 text-[#cba05d]" />
-                  <span>Protected by Attorney-Client Privilege</span>
-                </div>
-
-                <Button variant="gold" size="md" onClick={reset}>
-                  Book Another Consultation
-                </Button>
+        {/* Right Column: Solid Dark Navy (Figma Node 522:778) */}
+        <div className="bg-[#07183d] text-white py-16 sm:py-20 lg:py-24 px-6 sm:px-12 lg:px-20 xl:px-24 flex flex-col justify-center">
+          {isSubmitted ? (
+            <div className="flex flex-col items-center justify-center text-center py-16 animate-in fade-in duration-300">
+              <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center text-[#cba05d] mb-4 border border-white/20">
+                <CheckCircle2 className="w-10 h-10" />
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-6" noValidate>
-                {/* Practice Area Selection Chips (Node 522:782) */}
-                <div className="flex flex-col gap-2.5">
-                  <label className="font-sans font-medium text-sm text-[#fefefe]">
-                    What legal issue do you need help with?
-                  </label>
-                  <div className="flex flex-wrap gap-2 pt-1">
-                    {PRACTICE_AREAS.map((area) => {
-                      const isSelected = formData.practiceArea === area.title;
-                      return (
-                        <button
-                          key={area.id}
-                          type="button"
-                          onClick={() => updateField("practiceArea", area.title)}
-                          className={`px-3.5 py-2 rounded-lg text-xs font-sans transition-all duration-200 cursor-pointer ${
-                            isSelected
-                              ? "bg-[#cba05d] text-[#030a1a] font-semibold shadow-md"
-                              : "bg-white/10 text-white/90 hover:bg-white/15 border border-white/10"
-                          }`}
-                        >
-                          {area.title}
-                        </button>
-                      );
-                    })}
-                  </div>
+              <h3 className="font-serif text-2xl lg:text-3xl text-white mb-2">
+                Consultation Request Received
+              </h3>
+              <p className="font-sans text-neutral-300 max-w-md mb-8 leading-relaxed text-sm sm:text-base">
+                Thank you, <strong>{formData.fullName}</strong>. Your consultation inquiry has been logged. Our office will contact you directly.
+              </p>
+              <button
+                type="button"
+                onClick={reset}
+                className="py-3 px-8 rounded-md bg-white text-[#161616] font-medium text-base hover:bg-neutral-100 transition-colors"
+              >
+                Book Another Consultation
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="flex flex-col gap-7 w-full max-w-xl mx-auto lg:mx-0" noValidate>
+              {/* Question 1: What legal issue do you need help with? */}
+              <div>
+                <h3 className="font-sans font-medium text-lg sm:text-xl text-white pb-3.5">
+                  What legal issue do you need help with?
+                </h3>
+                <div className="flex flex-wrap gap-2.5">
+                  {PRACTICE_CHIPS.map((chip) => {
+                    const isSelected = formData.practiceArea === chip;
+                    return (
+                      <button
+                        key={chip}
+                        type="button"
+                        onClick={() => updateField("practiceArea", chip)}
+                        className={`px-4 py-2.5 rounded-lg text-sm font-sans transition-all duration-200 cursor-pointer ${
+                          isSelected
+                            ? "bg-[#394664] text-white border border-transparent shadow-sm"
+                            : "bg-transparent text-[#b2b7c3] border border-white/20 hover:border-white/40"
+                        }`}
+                      >
+                        {chip}
+                      </button>
+                    );
+                  })}
                 </div>
+              </div>
 
-                {/* Date & Time Picker */}
-                <div className="pt-2">
-                  <ConsultationCalendar
-                    selectedDate={formData.preferredDate}
-                    onSelectDate={(d) => updateField("preferredDate", d)}
-                    selectedTimeSlot={formData.preferredTimeSlot}
-                    onSelectTimeSlot={(t) => updateField("preferredTimeSlot", t)}
-                    consultationType={formData.consultationType}
-                    onSelectType={(type) => updateField("consultationType", type)}
-                  />
-                </div>
-
-                {/* Case Overview Note (Node 522:793) */}
-                <TextareaField
-                  label="Is there anything else you’d like us to know?"
+              {/* Question 2: Is there anything else you’d like us to know? */}
+              <div>
+                <h3 className="font-sans font-medium text-lg sm:text-xl text-white pb-3.5">
+                  Is there anything else you’d like us to know?
+                </h3>
+                <textarea
                   name="message"
+                  rows={4}
                   value={formData.message}
                   onChange={(e) => updateField("message", e.target.value)}
-                  error={errors.message}
                   placeholder="Tell us a little about your situation…"
-                  rows={3}
-                  required
+                  className={`w-full bg-[#05112b]/60 border rounded-lg p-4 text-white text-base placeholder-white/35 focus:outline-none transition-colors resize-none ${
+                    errors.message ? "border-red-400" : "border-white/20 focus:border-white"
+                  }`}
                 />
+                {errors.message && (
+                  <span className="text-xs text-red-300 mt-1 block">
+                    {errors.message}
+                  </span>
+                )}
+              </div>
 
-                {/* Personal Contact Details (Node 522:797) */}
+              {/* Question 3: Enter your details to book your consultation */}
+              <div>
+                <h3 className="font-sans font-medium text-lg sm:text-xl text-white pb-3.5">
+                  Enter your details to book your consultation.
+                </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <InputField
-                    label="Full Name"
-                    name="fullName"
-                    value={formData.fullName}
-                    onChange={(e) => updateField("fullName", e.target.value)}
-                    error={errors.fullName}
-                    placeholder="e.g. John Doe"
-                    required
-                  />
+                  <div>
+                    <label className="font-sans text-sm text-white mb-2 block">
+                      Phone <span className="text-xs text-white/50">(optional)</span>
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone || ""}
+                      onChange={(e) => updateField("phone", e.target.value)}
+                      placeholder="+40 390 254 046"
+                      className="w-full bg-[#394664]/60 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/35 focus:border-white focus:outline-none transition-colors"
+                    />
+                  </div>
 
-                  <InputField
-                    label="Email Address"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => updateField("email", e.target.value)}
-                    error={errors.email}
-                    placeholder="john@example.com"
-                    required
-                  />
+                  <div>
+                    <label className="font-sans text-sm text-white mb-2 block">
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      name="fullName"
+                      value={formData.fullName}
+                      onChange={(e) => updateField("fullName", e.target.value)}
+                      placeholder="David"
+                      className={`w-full bg-[#05112b] border rounded-lg px-4 py-3 text-white placeholder-white/35 focus:border-white focus:outline-none transition-colors ${
+                        errors.fullName ? "border-red-400" : "border-white/20"
+                      }`}
+                    />
+                    {errors.fullName && (
+                      <span className="text-xs text-red-300 mt-1 block">
+                        {errors.fullName}
+                      </span>
+                    )}
+                  </div>
                 </div>
+              </div>
 
-                <InputField
-                  label="Phone"
-                  name="phone"
-                  type="tel"
-                  optional
-                  value={formData.phone || ""}
-                  onChange={(e) => updateField("phone", e.target.value)}
-                  error={errors.phone}
-                  placeholder="(555) 000-0000"
-                />
-
-                {/* Submit CTA */}
-                <div className="pt-2">
-                  <Button
-                    type="submit"
-                    variant="gold"
-                    size="lg"
-                    showArrow
-                    disabled={isSubmitting}
-                    className="w-full justify-center text-base py-4 font-semibold shadow-lg hover:shadow-xl cursor-pointer"
-                  >
-                    {isSubmitting ? "Submitting..." : "Confirm Consultation"}
-                  </Button>
-                </div>
-              </form>
-            )}
-          </div>
+              {/* Submit CTA: Book a Consultation (White Button, Black Text, No Arrow) */}
+              <div className="pt-2">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full py-4 px-6 rounded-md bg-white hover:bg-neutral-100 text-[#161616] font-sans font-medium text-lg shadow-md transition-colors cursor-pointer active:scale-98"
+                >
+                  {isSubmitting ? "Submitting..." : "Book a Consultation"}
+                </button>
+              </div>
+            </form>
+          )}
         </div>
       </div>
     </section>

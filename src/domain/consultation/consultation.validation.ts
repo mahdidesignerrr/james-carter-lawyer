@@ -10,14 +10,12 @@ export function validateConsultationForm(data: ConsultationFormData): {
     errors.fullName = "Full name is required.";
   }
 
-  if (!data.email.trim()) {
-    errors.email = "Email address is required.";
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email.trim())) {
+  if (data.email && data.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email.trim())) {
     errors.email = "Please enter a valid email address.";
   }
 
   if (!data.message.trim()) {
-    errors.message = "Please provide a brief summary of your situation.";
+    errors.message = "Please tell us a little about your situation.";
   }
 
   return {
