@@ -39,8 +39,8 @@ export const HeaderNavbar: React.FC = () => {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 py-4 lg:py-6 px-4 sm:px-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          {/* Desktop Floating Pill Navbar - Permanently Frosted Glass with Symmetrical Padding */}
-          <div className="hidden lg:flex items-center justify-between w-full px-10 xl:px-14 py-3 rounded-full bg-white/15 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300">
+          {/* Desktop Floating Pill Navbar - Smoked Frosted Glass with Dark Tint for High Contrast on Light Sections */}
+          <div className="hidden lg:flex items-center justify-between w-full px-10 xl:px-14 py-3 rounded-full bg-[#030a1a]/65 backdrop-blur-lg border border-white/20 shadow-2xl transition-all duration-300">
             {/* Brand Mark: Cropped Figma Logo & Pure Name */}
             <button
               onClick={() => handleNavClick("hero")}
@@ -74,8 +74,8 @@ export const HeaderNavbar: React.FC = () => {
             </nav>
           </div>
 
-          {/* Mobile Top Bar - Frosted Glass Matching Figma Layout (Node 553:1651) */}
-          <div className="lg:hidden flex items-center justify-between w-full bg-white/15 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-white/20 shadow-lg">
+          {/* Mobile Top Bar - Smoked Glass with Dark Tint for High Contrast */}
+          <div className="lg:hidden flex items-center justify-between w-full bg-[#030a1a]/70 backdrop-blur-lg px-4 py-2.5 rounded-2xl border border-white/20 shadow-xl">
             <button
               onClick={() => setMobileMenuOpen(true)}
               className="p-1.5 text-white hover:text-[#cba05d] transition-colors cursor-pointer"

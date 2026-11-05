@@ -55,9 +55,9 @@ export const WhyChooseUsSection: React.FC = () => {
   return (
     <section
       id="why-us"
-      className="bg-[#07183d] lg:bg-[#fefefe] py-16 lg:py-32 transition-colors duration-300"
+      className="bg-[#07183d] lg:bg-[#fefefe] py-20 sm:py-24 lg:py-[120px] transition-colors duration-300"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-[80px]">
         {/* Heading: Corrected from invisible white to crisp dark-to-light theme */}
         <SectionHeading
           badge="WHY CHOOSE US"
@@ -66,8 +66,8 @@ export const WhyChooseUsSection: React.FC = () => {
         />
 
         {/* Narrative text with balanced line-height and scroll-driven word highlight */}
-        <div ref={containerRef} className="max-w-5xl pt-4 lg:pt-8">
-          <p className="font-sans font-light text-lg sm:text-2xl md:text-3xl lg:text-[36px] leading-snug sm:leading-relaxed lg:leading-[1.5] tracking-normal">
+        <div ref={containerRef} className="max-w-6xl pt-6 lg:pt-10">
+          <p className="font-sans font-light text-lg sm:text-2xl md:text-3xl lg:text-[38px] leading-snug sm:leading-relaxed lg:leading-[1.5] tracking-normal">
             {words.map((word, index) => (
               <span
                 key={index}
