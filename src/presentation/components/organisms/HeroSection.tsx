@@ -47,14 +47,14 @@ export const HeroSection: React.FC = () => {
       {/* Hero Content Container - Well-Proportioned and Balanced Layout */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 flex flex-col items-start w-full">
         {/* Top Tagline */}
-        <div className="mb-3 lg:mb-4">
+        <div className="mb-4 lg:mb-5">
           <span className="font-sans font-semibold text-xs sm:text-sm lg:text-[14px] xl:text-[15px] text-[#cba05d] tracking-[3px] uppercase select-none">
             EXPERIENCED. STRATEGIC. DEDICATED
           </span>
         </div>
 
         {/* Main Hero Headline - Refined Desktop Size to Avoid Crowding and Let Boardroom Breathe */}
-        <div className="mb-3 lg:mb-4 max-w-xl lg:max-w-2xl xl:max-w-3xl">
+        <div className="mb-5 lg:mb-6 max-w-xl lg:max-w-2xl xl:max-w-3xl">
           <h1 className="font-serif font-medium text-3xl sm:text-5xl lg:text-[54px] xl:text-[62px] text-[#fefefe] leading-[1.14] tracking-[-0.015em] drop-shadow-sm">
             Legal Representation <br className="hidden sm:inline" />
             <span className="text-[#fefefe]">You Can Rely On.</span>
@@ -62,14 +62,14 @@ export const HeroSection: React.FC = () => {
         </div>
 
         {/* Subtitle */}
-        <div className="mb-6 lg:mb-8 max-w-lg lg:max-w-xl">
+        <div className="mb-8 lg:mb-10 max-w-lg lg:max-w-xl">
           <p className="font-sans font-light text-sm sm:text-base lg:text-[18px] text-[#cba05d] leading-relaxed">
             Clear advice. Strong advocacy. Results that protect what matters most.
           </p>
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5 w-full sm:w-auto">
           <Button
             variant="gold"
             size="md"
