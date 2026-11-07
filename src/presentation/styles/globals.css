@@ -44,3 +44,17 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #cba05d;
 }
+
+/* Subtle ambient rotation for background decorative rings */
+@keyframes slow-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-slow-spin {
+  animation: slow-rotate 80s linear infinite;
+}

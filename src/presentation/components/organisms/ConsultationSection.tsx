@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useConsultationForm } from "@/application/use-consultation-form.hook";
+import { ScrollReveal } from "../atoms/ScrollReveal";
 import { CheckCircle2 } from "lucide-react";
 
 const PRACTICE_CHIPS = [
@@ -36,7 +37,8 @@ export const ConsultationSection: React.FC = () => {
       {/* Main Container constrained to Figma 1440px architecture */}
       <div className="relative z-10 max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2">
         {/* Left Column: White Side (Figma Node 522:767) */}
-        <div className="bg-white flex flex-col justify-between py-16 sm:py-20 lg:py-[100px] px-6 sm:px-12 lg:px-16 xl:px-20">
+        <ScrollReveal direction="up" distance={24} duration={800} className="w-full h-full">
+          <div className="bg-white h-full flex flex-col justify-between py-16 sm:py-20 lg:py-[100px] px-6 sm:px-12 lg:px-16 xl:px-20">
           {/* Top Title & Narrative */}
           <div>
             <span className="font-sans font-semibold text-xs sm:text-sm lg:text-[16px] text-[#cba05d] tracking-[2.64px] uppercase select-none block">
@@ -95,9 +97,11 @@ export const ConsultationSection: React.FC = () => {
             </div>
           </div>
         </div>
+      </ScrollReveal>
 
-        {/* Right Column: Solid Dark Navy (Figma Node 522:778) */}
-        <div className="bg-[#07183d] text-white py-16 sm:py-20 lg:py-[100px] px-6 sm:px-12 lg:px-16 xl:px-20 flex flex-col justify-center">
+      {/* Right Column: Solid Dark Navy (Figma Node 522:778) */}
+      <ScrollReveal direction="up" distance={24} delay={150} duration={800} className="w-full h-full">
+        <div className="bg-[#07183d] text-white h-full py-16 sm:py-20 lg:py-[100px] px-6 sm:px-12 lg:px-16 xl:px-20 flex flex-col justify-center">
           {isSubmitted ? (
             <div className="flex flex-col items-center justify-center text-center py-16 animate-in fade-in duration-300 max-w-[560px]">
               <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center text-[#cba05d] mb-4 border border-white/20">
@@ -223,7 +227,8 @@ export const ConsultationSection: React.FC = () => {
             </form>
           )}
         </div>
-      </div>
-    </section>
+      </ScrollReveal>
+    </div>
+  </section>
   );
 };

@@ -4,6 +4,7 @@ import React from "react";
 import { TESTIMONIALS_DATA } from "@/domain/testimonial/testimonial.constants";
 import { TestimonialCard } from "../molecules/TestimonialCard";
 import { SectionHeading } from "../atoms/SectionHeading";
+import { ScrollReveal } from "../atoms/ScrollReveal";
 
 export const TestimonialsSection: React.FC = () => {
   // Exact 3 testimonials from Figma Node 550:1444 (Margaret H., David L., Priya S.)
@@ -16,18 +17,27 @@ export const TestimonialsSection: React.FC = () => {
     >
       <div className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-[80px]">
         {/* Section Heading matching Figma Node 550:1445 */}
-        <div className="pb-8 sm:pb-10 lg:pb-12">
+        <ScrollReveal direction="up" distance={20} duration={750} className="pb-8 sm:pb-10 lg:pb-12">
           <SectionHeading
             badge="TESTIMONIALS"
             title="Trusted by the People We Represent."
             className="pb-0"
           />
-        </div>
+        </ScrollReveal>
 
         {/* 3 Testimonials Grid matching Figma Node 550:1446 (w-[450px] cards with 48px gap) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-[48px] items-stretch">
-          {testimonials.map((item) => (
-            <TestimonialCard key={item.id} testimonial={item} />
+          {testimonials.map((item, idx) => (
+            <ScrollReveal
+              key={item.id}
+              direction="up"
+              distance={24}
+              delay={idx * 100}
+              duration={750}
+              className="h-full"
+            >
+              <TestimonialCard testimonial={item} />
+            </ScrollReveal>
           ))}
         </div>
       </div>

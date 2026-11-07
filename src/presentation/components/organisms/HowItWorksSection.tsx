@@ -2,6 +2,7 @@
 
 import React from "react";
 import { SectionHeading } from "../atoms/SectionHeading";
+import { ScrollReveal } from "../atoms/ScrollReveal";
 
 interface StepItem {
   id: string;
@@ -72,42 +73,46 @@ export const HowItWorksSection: React.FC = () => {
   return (
     <section id="how-it-works" className="bg-[#e6e8ec] scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28 py-16 sm:py-20 lg:py-[100px]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-        <SectionHeading
-          badge="HOW IT WORKS"
-          title="From Your First Call to a Clear Legal Strategy"
-        />
+        <ScrollReveal direction="up" distance={20} duration={750}>
+          <SectionHeading
+            badge="HOW IT WORKS"
+            title="From Your First Call to a Clear Legal Strategy"
+          />
+        </ScrollReveal>
 
         {/* Unified 4-Step Container Matching Figma Image 1 & Node 522:711 */}
-        <div className="bg-[#fefefe] rounded-2xl shadow-sm border border-neutral-200/90 overflow-hidden mt-6 sm:mt-8 lg:mt-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 lg:divide-x divide-neutral-200/80">
-            {steps.map((step) => (
-              <div
-                key={step.id}
-                className="p-7 sm:p-8 lg:p-9 flex flex-col items-start transition-colors duration-200 hover:bg-neutral-50/50"
-              >
-                {/* Beige Squircle Badge for Icon */}
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#faf6f0] border border-[#ece4d6] flex items-center justify-center shrink-0 mb-5 shadow-xs">
-                  {step.icon}
+        <ScrollReveal direction="up" distance={24} delay={150} duration={800}>
+          <div className="bg-[#fefefe] rounded-2xl shadow-sm border border-neutral-200/90 overflow-hidden mt-6 sm:mt-8 lg:mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 lg:divide-x divide-neutral-200/80">
+              {steps.map((step) => (
+                <div
+                  key={step.id}
+                  className="group p-7 sm:p-8 lg:p-9 flex flex-col items-start transition-all duration-300 hover:bg-[#faf8f5]"
+                >
+                  {/* Beige Squircle Badge for Icon */}
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#faf6f0] border border-[#ece4d6] flex items-center justify-center shrink-0 mb-5 shadow-xs transition-transform duration-300 group-hover:scale-105 group-hover:border-[#cba05d]/40">
+                    {step.icon}
+                  </div>
+
+                  {/* Step Number Tagline */}
+                  <span className="font-sans font-semibold text-xs text-[#a9844c] tracking-[0.165em] uppercase select-none mb-2">
+                    {step.stepNumber}
+                  </span>
+
+                  {/* Step Title */}
+                  <h3 className="font-sans font-bold text-lg lg:text-xl text-[#07183d] tracking-tight mb-2">
+                    {step.title}
+                  </h3>
+
+                  {/* Step Description */}
+                  <p className="font-sans font-normal text-sm text-[#666666] leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
-
-                {/* Step Number Tagline */}
-                <span className="font-sans font-semibold text-xs text-[#a9844c] tracking-[0.165em] uppercase select-none mb-2">
-                  {step.stepNumber}
-                </span>
-
-                {/* Step Title */}
-                <h3 className="font-sans font-bold text-lg lg:text-xl text-[#07183d] tracking-tight mb-2">
-                  {step.title}
-                </h3>
-
-                {/* Step Description */}
-                <p className="font-sans font-normal text-sm text-[#666666] leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
