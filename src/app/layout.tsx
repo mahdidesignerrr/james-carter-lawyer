@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "@/presentation/styles/globals.css";
+import { KeloraBadge } from "@/components/KeloraBadge";
 
 export const viewport: Viewport = {
   themeColor: "#07183d",
@@ -74,6 +75,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
+        <KeloraBadge />
       </body>
     </html>
   );
