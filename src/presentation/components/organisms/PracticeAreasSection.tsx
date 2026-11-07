@@ -13,7 +13,7 @@ export const PracticeAreasSection: React.FC = () => {
   return (
     <section
       id="practice-areas"
-      className="bg-[#fefefe] lg:bg-[#07183d] scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28 py-20 sm:py-24 lg:py-32 relative transition-colors duration-300"
+      className="bg-[#fefefe] lg:bg-[#07183d] scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28 py-16 sm:py-20 lg:py-[100px] relative transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
         {/* Section Heading with responsive theme */}
@@ -25,14 +25,14 @@ export const PracticeAreasSection: React.FC = () => {
         />
 
         {/* 6 Cards Grid: 2 columns on mobile, 3 on desktop with generous Figma gaps */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 pt-6 pb-12 sm:pb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 pt-4 pb-10 sm:pb-12">
           {PRACTICE_AREAS.map((area) => (
             <PracticeAreaCard key={area.id} area={area} />
           ))}
         </div>
 
         {/* Lets Get Started (Figma Node 522:696) - Clean unboxed callout */}
-        <div className="pt-10 sm:pt-14 flex flex-col md:flex-row md:items-center justify-between gap-6 border-t border-black/10 lg:border-white/15">
+        <div className="pt-8 sm:pt-10 flex flex-col md:flex-row md:items-center justify-between gap-6 border-t border-black/10 lg:border-white/15">
           <div className="flex flex-col items-start gap-2 max-w-2xl">
             <h4 className="font-sans font-normal text-xl sm:text-2xl lg:text-[24px] text-[#5c4f39] lg:text-[#fefefe]">
               Not sure where your case fits?

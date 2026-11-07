@@ -8,7 +8,7 @@ export const FooterSection: React.FC = () => {
   const { scrollTo } = useScrollNavigation();
 
   return (
-    <footer className="bg-[#e6e8ec] text-[#07183d] pt-20 sm:pt-24 lg:pt-[100px] px-6 sm:px-12 lg:px-8">
+    <footer className="bg-[#e6e8ec] text-[#07183d] pt-16 sm:pt-20 lg:pt-[100px] px-6 sm:px-12 lg:px-8">
       <div className="max-w-[1200px] mx-auto w-full">
         {/* Main Content (Figma Node 566:1747) */}
         <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-16 pb-[48px]">
@@ -86,7 +86,7 @@ export const FooterSection: React.FC = () => {
         </div>
 
         {/* Bottom Bar: Copyright & Advertising Disclaimer (Node 566:1748) */}
-        <div className="border-t-[0.5px] border-[#59647d] pt-6 pb-20 sm:pb-24 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans font-normal text-sm sm:text-base text-[#59647d]">
+        <div className="border-t-[0.5px] border-[#59647d] pt-6 pb-16 sm:pb-20 lg:pb-[100px] flex flex-col sm:flex-row items-center justify-between gap-4 font-sans font-normal text-sm sm:text-base text-[#59647d]">
           <p className="text-center sm:text-left">
             © 2026 James Carter, Attorneys at Law. All rights reserved.
           </p>

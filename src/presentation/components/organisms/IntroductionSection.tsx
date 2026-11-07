@@ -10,7 +10,7 @@ export const IntroductionSection: React.FC = () => {
   const { scrollTo } = useScrollNavigation();
 
   return (
-    <section id="introduction" className="bg-[#fefefe] scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28 py-20 sm:py-24 lg:py-32">
+    <section id="introduction" className="bg-[#fefefe] scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28 py-16 sm:py-20 lg:py-[100px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
         {/* Desktop Side-by-Side Layout (lg and above) */}
         <div className="hidden lg:grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">

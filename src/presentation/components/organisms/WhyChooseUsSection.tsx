@@ -55,7 +55,7 @@ export const WhyChooseUsSection: React.FC = () => {
   return (
     <section
       id="why-us"
-      className="bg-[#07183d] lg:bg-[#fefefe] scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28 py-20 sm:py-24 lg:py-[120px] transition-colors duration-300"
+      className="bg-[#07183d] lg:bg-[#fefefe] scroll-mt-20 sm:scroll-mt-24 lg:scroll-mt-28 py-16 sm:py-20 lg:py-[100px] transition-colors duration-300"
     >
       <div className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-[80px]">
         {/* Heading: Corrected from invisible white to crisp dark-to-light theme */}
@@ -66,7 +66,7 @@ export const WhyChooseUsSection: React.FC = () => {
         />
 
         {/* Narrative text with balanced line-height and scroll-driven word highlight */}
-        <div ref={containerRef} className="max-w-6xl pt-6 lg:pt-10">
+        <div ref={containerRef} className="max-w-6xl pt-4 sm:pt-6 lg:pt-8">
           <p className="font-sans font-light text-lg sm:text-2xl md:text-3xl lg:text-[38px] leading-snug sm:leading-relaxed lg:leading-[1.5] tracking-normal">
             {words.map((word, index) => (
               <span

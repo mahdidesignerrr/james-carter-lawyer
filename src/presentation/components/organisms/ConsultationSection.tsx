@@ -36,7 +36,7 @@ export const ConsultationSection: React.FC = () => {
       {/* Main Container constrained to Figma 1440px architecture */}
       <div className="relative z-10 max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2">
         {/* Left Column: White Side (Figma Node 522:767) */}
-        <div className="bg-white flex flex-col justify-between py-20 sm:py-24 lg:py-28 px-6 sm:px-12 lg:px-16 xl:px-20">
+        <div className="bg-white flex flex-col justify-between py-16 sm:py-20 lg:py-[100px] px-6 sm:px-12 lg:px-16 xl:px-20">
           {/* Top Title & Narrative */}
           <div>
             <span className="font-sans font-semibold text-xs sm:text-sm lg:text-[16px] text-[#cba05d] tracking-[2.64px] uppercase select-none block">
@@ -97,7 +97,7 @@ export const ConsultationSection: React.FC = () => {
         </div>
 
         {/* Right Column: Solid Dark Navy (Figma Node 522:778) */}
-        <div className="bg-[#07183d] text-white py-20 sm:py-24 lg:py-28 px-6 sm:px-12 lg:px-16 xl:px-20 flex flex-col justify-center">
+        <div className="bg-[#07183d] text-white py-16 sm:py-20 lg:py-[100px] px-6 sm:px-12 lg:px-16 xl:px-20 flex flex-col justify-center">
           {isSubmitted ? (
             <div className="flex flex-col items-center justify-center text-center py-16 animate-in fade-in duration-300 max-w-[560px]">
               <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center text-[#cba05d] mb-4 border border-white/20">
