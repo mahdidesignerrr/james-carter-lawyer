@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export function KeloraBadge() {
   const getTemplateUrl =
@@ -46,19 +47,15 @@ export function KeloraBadge() {
         aria-label="Visit Kelora Studio"
         className="flex items-center gap-3 px-4 py-2.5 rounded-full bg-[#0c0d0e]/90 hover:bg-[#141618] text-[#f4f5f6] border border-white/10 shadow-[0_12px_32px_rgba(0,0,0,0.45)] backdrop-blur-md transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
       >
-        <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 text-white/90">
-          <svg
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M7 17L17 7M17 7H7M17 7V17" />
-          </svg>
+        <span className="relative w-6 h-6 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+          <Image
+            src="/assets/images/kelora-mark.png"
+            alt="Kelora Studio Logo"
+            width={24}
+            height={24}
+            className="w-full h-full object-contain rounded-full"
+            priority
+          />
         </span>
         <span className="text-[13px] font-medium tracking-tight text-white/90 whitespace-nowrap">
           Made in Kelora
